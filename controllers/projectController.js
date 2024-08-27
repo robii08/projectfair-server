@@ -55,7 +55,7 @@ exports.getAllProjectController = async(req,res) =>{
         }
     }
     try {
-        const allProject = await projects.find()
+        const allProject = await projects.find(query)
         res.status(200).json(allProject)
     } catch (error) {
         res.status(401).json(error)
